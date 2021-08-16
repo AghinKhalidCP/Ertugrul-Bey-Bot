@@ -64,7 +64,7 @@ from DaisyX.modules.helper_funcs.readable_time import get_readable_time
 
 PM_START_TEXT = """
 Hello there,[Hoşgeldiniz](https://telegra.ph/file/433efe2bf3544e472fb98.jpg)
-Ben Süleyman Şah oğlu Ertuğrul,A Turkish Themed Group Managing Bot and I will help in managing your group..🤠
+Ben Süleyman Şah oğlu Ertuğrul,A Turkish Themed Group Managing Bot and I will help in managing your group...🤠
 
 »» ```I've Many Specialties Check``` >>> /help <<<
 »» ```Support My owners , Don't Forget to Click``` >>> /Donate <<<
@@ -73,21 +73,21 @@ Ben Süleyman Şah oğlu Ertuğrul,A Turkish Themed Group Managing Bot and I wil
 
 buttons = [
     [
-        InlineKeyboardButton(text="🚀 INFO 🚀", callback_data="aboutmanu_"),
+        InlineKeyboardButton(text="💡 INFO", callback_data="aboutmanu_"),
     ],
     [
-        InlineKeyboardButton(text="❓ Help & Commands ❓", callback_data="help_back"),
+        InlineKeyboardButton(text="📙Help", callback_data="help_back"),
     ],
     [
         InlineKeyboardButton(
-            text="☑ Add Kaguya to your group ☑", url="t.me/KaguyaSamaRobot?startgroup=true"
+            text="➕Add Ertugrul to your group", url="http://t.me/ErtugrulBey_ManagerBot?startgroup=true"
         ),
     ],
 ]
 
 
 HELP_STRINGS = f"""
-*Main Commands :* [🤖](https://telegra.ph/file/02cf4f4c7682fc5b5546c.jpg)
+*Main Commands :* [🤖](https://telegra.ph/file/5717b4f5482ac355a76f0.jpg)
 ✪ /start: Starts me! You've probably already used this.
 ✪ /help: Click this, I'll let you know about myself!
 ✪ /donate: You can support my creater using this command.
@@ -101,8 +101,8 @@ HELP_STRINGS = f"""
 
 
 DONATE_STRING = """Heya, glad to hear you want to donate!
-You can donate to the original writer's of the Base code,
-Support them  [Alpha](t.me/AlphaFreakz),"""
+You can donate to [My Owners](https://t.me/its_us_DeV/3) through @adbzmelikshahbot,
+Support Our Channel  [Turkish Islamic Media](t.me/Turkish_Islamic_Media),"""
 
 IMPORTED = {}
 MIGRATEABLE = []
@@ -223,7 +223,7 @@ def start(update: Update, context: CallbackContext):
             )
     else:
         update.effective_message.reply_text(
-            "I'm awake already!\n<b>Haven't slept since:</b> <code>{}</code>".format(
+            "😒 Ertugrul won't Sleep!\n<b>Haven't slept since:</b> <code>{}</code>".format(
                 uptime
             ),
             parse_mode=ParseMode.HTML,
@@ -361,8 +361,8 @@ def DaisyX_about_callback(update, context):
     query = update.callback_query
     if query.data == "aboutmanu_":
         query.message.edit_text(
-            text=f"* Hi again!  The name's {dispatcher.bot.first_name}  \n\n I'm a next generational group management bot developed by Magnificent Union.* "
-            f"\n\n 🔥 Join [Magnificent Union](https://t.me/MagnificentUnion) To Keep Yourself Updated About {dispatcher.bot.first_name} 🔥"
+            text=f"* Hi again!  I'm {dispatcher.bot.first_name}  \n\n I'm a next generational group management bot developed by [Turkish Islamic Media](https://t.me/Turkish_Islamic_Media).* "
+            f"\n\n 🔥 Join for [Support](https://t.me/Turkish_Islamic_Media) To Keep Yourself Updated About {dispatcher.bot.first_name} 🔥"
             f"\n\n I have the normal GROUP MANAGING functions like flood control, a warning system etc but I mainly have the advanced and handy Antispam system and the SIBYL banning system which safegaurds and helps your group from spammers."
             f"\n\nI Can Manage Your Groups Smoothly, With Some Special Features [:)](https://telegra.ph/file/02cf4f4c7682fc5b5546c.jpg)"
             f"\n\n👇 You Can Know More About Me By Clicking The Below Buttons 👇",
@@ -399,7 +399,7 @@ def DaisyX_about_callback(update, context):
         query.message.edit_text(
             text=f"* ｢ BASIC HELP 」*"
             f"\nYou Can Also Add {dispatcher.bot.first_name} To Your Chats By Clicking [Here](http://t.me/{dispatcher.bot.username}?startgroup=true) And Selecting Chat. \n"
-            f"\n\nYou Can get support for {dispatcher.bot.first_name} by joining [Magnificent Union](https://t.me/MagnificentUnion).\n"
+            f"\n\nYou Can get support for {dispatcher.bot.first_name} from [DeVs](https://t.me/adbzmelikshahbot).\n"
             f"",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
