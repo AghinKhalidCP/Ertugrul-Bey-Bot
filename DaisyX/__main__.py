@@ -63,10 +63,11 @@ from DaisyX.modules.helper_funcs.misc import paginate_modules
 from DaisyX.modules.helper_funcs.readable_time import get_readable_time
 
 PM_START_TEXT = """
-Hello there, I'm [Kaguya](https://telegra.ph/file/02cf4f4c7682fc5b5546c.jpg)
+Hello there,[Hoşgeldiniz](https://telegra.ph/file/433efe2bf3544e472fb98.jpg)
+Ben Süleyman Şah oğlu Ertuğrul,A Turkish Themed Group Managing Bot and I will help in managing your group..🤠
 
-I am an Anime Themed Group Managing Bot and I will help in managing your group
-
+»» ```I've Many Specialties Check``` >>> /help <<<
+»» ```Support My owners , Don't Forget to Click``` >>> /Donate <<<
 ✪ Make sure you read *INFO* Section Below ✪ 
 """
 
