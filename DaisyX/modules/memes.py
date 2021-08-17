@@ -80,14 +80,14 @@ def hitlertext(update, context):
 
 
 @run_async
-def spongemocktext(update, context):
+def kordoglutext(update, context):
     message = update.effective_message
     if message.reply_to_message:
         data = message.reply_to_message.text
     else:
         data = str("Haha yes, I know how to mock text.")
 
-    if not Path("bob.jpg").is_file():
+    if not Path("kordoglu.jpg").is_file():
         buffer = Image.open(
             io.BytesIO(
                 base64.b64decode(
@@ -95,31 +95,31 @@ def spongemocktext(update, context):
                 )
             )
         )
-        buffer.save("bob.jpg", "JPEG")
-    for mocked in glob.glob("mocked*"):
+        buffer.save("kordoglu.jpg", "JPEG")
+    for mocked in glob.glob("Kordoglued*"):
         os.remove(mocked)
     reply_text = spongemock.mock(data)
 
     randint = random.randint(1, 699)
-    magick = """convert bob.jpg -font Impact -pointsize 30 -size 512x300 -stroke black -strokewidth 1 -fill white -background none -gravity north caption:"{}" -flatten mocked{}.jpg""".format(
+    magick = """convert kordoglu.jpg -font Impact -pointsize 30 -size 512x300 -stroke black -strokewidth 1 -fill white -background none -gravity north caption:"{}" -flatten mocked{}.jpg""".format(
         reply_text, randint
     )
     os.system(magick)
-    with open("mocked{}.jpg".format(randint), "rb") as mockedphoto:
+    with open("kordoglued{}.jpg".format(randint), "rb") as mockedphoto:
         message.reply_to_message.reply_photo(
             photo=mockedphoto, reply=message.reply_to_message
         )
-    os.remove("mocked{}.jpg".format(randint))
+    os.remove("kordoglued{}.jpg".format(randint))
 
 
-MOCK_HANDLER = DisableAbleCommandHandler("mock", spongemocktext, admin_ok=True)
+KORDOGLU_HANDLER = DisableAbleCommandHandler("kordoglu", kordoglutext, admin_ok=True)
 KIM_HANDLER = DisableAbleCommandHandler("kim", kimtext, admin_ok=True)
 HITLER_HANDLER = DisableAbleCommandHandler("hitler", hitlertext, admin_ok=True)
 
 
-dispatcher.add_handler(MOCK_HANDLER)
+dispatcher.add_handler(KORDOGLU_HANDLER)
 dispatcher.add_handler(KIM_HANDLER)
 dispatcher.add_handler(HITLER_HANDLER)
 
-__command_list__ = ["mock", "kim", "hitler"]
-__handlers__ = [MOCK_HANDLER, KIM_HANDLER, HITLER_HANDLER]
+__command_list__ = ["kordoglu", "kim", "hitler"]
+__handlers__ = [KORDOGLU_HANDLER, KIM_HANDLER, HITLER_HANDLER]
